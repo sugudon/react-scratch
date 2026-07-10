@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://sugudon.github.io/react-scratch",
   "scripts": {
     "test": "jest",
     "dev": "vite",
@@ -10,7 +11,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.2.7",
@@ -41,6 +44,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "eslint-plugin-storybook": "^10.5.0",
+    "gh-pages": "^6.3.0",
     "globals": "^17.7.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^30.4.2",
