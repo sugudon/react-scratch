@@ -29,6 +29,17 @@ jobs:
       - name: Build App
         run: npm run build
 
+      - name: Show Files
+        run: |
+          pwd
+          ls -la
+          find . -maxdepth 2 -type d
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
       - name: Build Docker Image
         run: docker build -t react-scratch .
 
